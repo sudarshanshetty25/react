@@ -12,8 +12,27 @@ console.log(price);
 console.log(brand);
 
 //destructuring with default values
-const user={uname:"suadrshan",age:19};
+const user={uname:"varshith",age:19};
 const {uname,age,email="No email provided"}=user;
 console.log(uname);
 console.log(age);
 console.log(email);
+
+const responce={
+    status:200,
+    data:{
+        user:{
+            usnName:"varshith",
+            address:{
+                city:"udupi",
+                country:"India",
+            }
+        } 
+        
+    }
+};
+
+const { status, data: { user: { usrName, address: { city, country } } } } = responce;
+console.log(usrName); 
+console.log(city);    
+console.log(country);
